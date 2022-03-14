@@ -11,21 +11,12 @@ var textoValido = false;
 // Declaración de funciones:
 
 // Capturar texto ingresado:
-function capturarTexto1() {
+function capturarTexto() {
     textoIngresado = entradaTexto.value;
     if(textoIngresado === '') {
         alert('El campo está vacío');
     } else {
         validarTexto();
-    }
-};
-
-function capturarTexto2() {
-    textoIngresado = salidaTexto.value;
-    if(textoIngresado === '') {
-        alert('El campo está vacío');
-    } else {
-        textoValido = true;
     }
 };
 
@@ -62,6 +53,8 @@ function encriptar() {
             .replaceAll("a", "ai")
             .replaceAll("o", "ober")
             .replaceAll("u", "ufat");
+        var titulo = document.querySelector("h2");
+        titulo.textContent="Mensaje encriptado:";
         console.log(textoNuevo);
         return salidaTexto.value = textoNuevo;
     }
@@ -80,13 +73,15 @@ No caracteres especiales */
 
 function desencriptar() {
     if (textoValido) {
-        var textoIngresado = salidaTexto.value;
+        var textoIngresado = entradaTexto.value;
         var textoNuevo = textoIngresado
             .replaceAll("enter", "e")
             .replaceAll("imes", "i")
             .replaceAll("ai", "a")
             .replaceAll("ober", "o")
             .replaceAll("ufat", "u");
+        var titulo = document.querySelector("h2");
+        titulo.textContent="Mensaje desencriptado:";
         console.log(textoNuevo);
         return salidaTexto.value = textoNuevo;
     }
@@ -98,7 +93,7 @@ function copiar() {
         alert('El campo está vacío');
     } else {
         var titulo = document.querySelector("h2");
-        titulo.textContent="Mensaje Copiado:";
+        titulo.textContent="Mensaje copiado:";
         textoNuevo = salidaTexto.value;
         navigator.clipboard.writeText(textoNuevo);
         salidaTexto.select();
@@ -113,13 +108,13 @@ function reiniciar() {
 // Botones:
 botonEncriptar.addEventListener("click",function(event) {
     event.preventDefault();
-    capturarTexto1();
+    capturarTexto();
     encriptar();
 });
 
 botonDesencriptar.addEventListener("click",function(event) {
     event.preventDefault();
-    capturarTexto2();
+    capturarTexto();
     desencriptar();
 });
 
