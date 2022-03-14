@@ -11,12 +11,21 @@ var textoValido = false;
 // Declaración de funciones:
 
 // Capturar texto ingresado:
-function capturarTexto() {
+function capturarTexto1() {
     textoIngresado = entradaTexto.value;
     if(textoIngresado === '') {
         alert('El campo está vacío');
     } else {
         validarTexto();
+    }
+};
+
+function capturarTexto2() {
+    textoIngresado = salidaTexto.value;
+    if(textoIngresado === '') {
+        alert('El campo está vacío');
+    } else {
+        textoValido = true;
     }
 };
 
@@ -70,9 +79,7 @@ No se permite acentuación de palabras
 No caracteres especiales */ 
 
 function desencriptar() {
-    if(salidaTexto.value === "") {
-        alert('El campo está vacío');
-    } else if (textoValido) {
+    if (textoValido) {
         var textoIngresado = salidaTexto.value;
         var textoNuevo = textoIngresado
             .replaceAll("enter", "e")
@@ -106,12 +113,14 @@ function reiniciar() {
 // Botones:
 botonEncriptar.addEventListener("click",function(event) {
     event.preventDefault();
-    capturarTexto();
+    capturarTexto1();
+    validarTexto();
     encriptar();
 });
 
 botonDesencriptar.addEventListener("click",function(event) {
     event.preventDefault();
+    capturarTexto2();
     desencriptar();
 });
 

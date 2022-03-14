@@ -8,7 +8,7 @@
 }
 
 html {
-    background-image: url(../img/fondo-02.jpg);
+    background-image: url(./img/fondo-02.jpg);
     background-size: cover;
     background-position: center;
     background-repeat:no-repeat;
@@ -117,4 +117,13 @@ main {
 .footer-copy a {
     text-decoration: none;
     color: inherit;
+}
+
+@media screen and (max-width: 480px) {
+    .titulo, footer {
+        width: auto;
+    }
+    .box {
+        width: 100%;
+    }
 }
