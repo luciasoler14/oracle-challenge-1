@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Encriptador de texto</title>
+</head>
+
+<body>
+    <main>
+        <section class="form">
+            <h1 class="titulo">Código Secreto</h1>
+                    
+            <div class="main">
+                <div class="form box">
+                    <form action="">
+                        <label for="input-texto">Sólo letras minúsculas, sin acentos</label>
+                        <textarea class="text-area" type="text" name="form" id="form" placeholder="Ingrese su texto aquí" rows="3" cols="40"></textarea>
+                        <input class="boton" type="submit" name="boton-encriptar" id="boton-encriptar" value="Encriptar">
+                        <input class="boton" type="submit" name="boton-desencriptar" id="boton-desencriptar" value="Desencriptar">
+                    </form>
+                </div>
+        
+                <div class="message box">
+                    <div>
+                        <h2>Mensaje encriptado:</h2>
+                        <textarea class="text-area" type="text" name="message" id="message" placeholder="El mensaje se mostrará aquí" rows="3" cols="40"></textarea>
+                        <input class="boton" type="submit" name="boton-copy" id="boton-copy" value="Copiar">
+                        <input class="boton" type="submit" name="boton-reset" id="boton-reset" value="Reiniciar">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <ul class="footer-redes">
+            <li>
+                <a href="#" class="red-link"><img class="red-icon" src="img/icon-instagram.png" alt="Lulú instagram page"></a>
+            </li>
+            <li>
+                <a href="#" class="red-link"><img class="red-icon" src="img/icon-facebook.png" alt="Lulú facebook page"></a>
+            </li>
+            <li>
+                <a href="#" class="red-link"><img class="red-icon" src="img/icon-youtube.png" alt="Lulú youtube page"></a>
+            </li>
+            <li>
+                <a href="#" class="red-link"><img class="red-icon" src="img/icon-linkedin.png" alt="Lulú linkedin page"></a>
+            </li>   
+        </ul>
+        <p class="footer-copy">Copyright © 2022 - Developed & design by <strong><a href="#">Lulú</a></strong></p>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

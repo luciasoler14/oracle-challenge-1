@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    background-image: url(/img/fondo-02.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat:no-repeat;
+    height: 100vh;
+    width: 100%;
+}
+
+.titulo {
+    font-size: 55px;
+    color: white;
+    text-align: center;
+    margin: 12vh 0 4vh 0;
+    text-shadow: 5px 4px 5px black;
+}
+
+.titulo:hover {
+    color: rgb(97, 252, 252);
+}
+
+main {
+    height: 70vh;
+    
+}
+
+.main  {
+    width: 80vw;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.box {
+    padding: 25px 30px;
+    margin: 40px 10px;
+    box-shadow: 15px 15px 5px rgba(15, 15, 15, 0.6);
+    background-color: rgb(0, 0, 0, 0.8);
+    min-height: 220px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    z-index: 2;
+}
+
+.text-area {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: block;
+    padding: 0.5rem;
+    width: 28vw;
+    font-size: 14px;
+    margin: 20px 0px;
+    line-height: 1.25rem;
+}
+
+.boton {
+    border: 0;
+    color: white;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    font-size: 15px;
+    background-color: #FF7A00;
+    padding: 10px;
+    margin: 0 10px 10px 0;
+    width: 110px;
+}
+
+.boton:hover {
+    background-color: gray;
+}
+
+.footer {
+    background: black;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    z-index: 1;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.footer-redes {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-redes li {
+    margin: 0 5px;
+}
+
+.footer .red-icon {
+    width: 32px;
+    margin: 5px;
+}
+
+.footer-copy {
+    color: white;
+    text-shadow: 2px 2px 3px black;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.footer-copy a {
+    text-decoration: none;
+    color: inherit;
+}
