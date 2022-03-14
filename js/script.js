@@ -114,7 +114,6 @@ function reiniciar() {
 botonEncriptar.addEventListener("click",function(event) {
     event.preventDefault();
     capturarTexto1();
-    validarTexto();
     encriptar();
 });
 
